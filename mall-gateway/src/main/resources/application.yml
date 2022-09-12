@@ -6,6 +6,8 @@ spring:
       matching-strategy: ant_path_matcher
   cloud:
     gateway:
+      loadbalancer:
+        use404: true
       discovery:
         locator:
           enabled: true
