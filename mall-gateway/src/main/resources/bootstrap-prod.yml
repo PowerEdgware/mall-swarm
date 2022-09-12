@@ -4,9 +4,14 @@ spring:
       discovery:
         server-addr: http://172.19.184.86:8848
         username: mall-nacos
-        password: Nacos@123321
+        password: ${nacos_passwd}
+        namespace: 5a7d0ad2-f2b6-4e1f-b7da-ae85d8383486
       config:
         server-addr: http://172.19.184.86:8848
         file-extension: yaml
         username: mall-nacos
-        password: Nacos@123321
+        password: ${nacos_passwd}
+        namespace: 5a7d0ad2-f2b6-4e1f-b7da-ae85d8383486
+        shared-configs:
+          - data-id: common-db.yaml
+            group: DB_GROUP
