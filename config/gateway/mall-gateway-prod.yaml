@@ -3,7 +3,7 @@ spring:
     host: localhost # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
     port: 26377 # Redis服务器连接端口
-    password: fooBared110 #不设置密码
+    password: 888888 #不设置密码
   security:
     oauth2:
       resourceserver:
