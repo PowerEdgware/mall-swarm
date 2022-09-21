@@ -40,8 +40,9 @@ public class SeaweedFSController {
     @ResponseBody
     public CommonResult upload(@RequestPart("file") MultipartFile file) {
         try {
+            int bucketLen=bucket.length();
             String fileUrl= s3Client.uploadObject(bucket,file);
-            String objectName=fileUrl.substring(fileUrl.indexOf(bucket)+1);
+            String objectName=fileUrl.substring(fileUrl.indexOf(bucket)+bucketLen+1);
             LOGGER.info("文件上传成功!"+fileUrl);
             MinioUploadDto minioUploadDto = new MinioUploadDto();
             minioUploadDto.setName(objectName);
